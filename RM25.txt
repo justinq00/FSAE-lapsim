@@ -1,0 +1,105 @@
+% Car file for Justin's lap sim
+% Any line starting with '%' is ignored
+% must keep labels before each specification
+% cannot place comments or empty lines
+% between labels and corresponding values
+
+%driver skill from 0 - 1, multiplies CoF
+%wouldn't recommend putting it as 0, or shit will explode
+%0.85-1 should be reasonable
+driver_skill
+1
+
+%kg
+mass_car
+191
+
+%kg
+mass_driver
+68.04
+
+%proportion of mass on the front
+prop_front
+0.47
+
+%m
+f_track
+1.2319
+
+%m
+r_track
+1.19888
+
+%m
+wheelbase
+1.5367
+
+%m
+CGH
+0.332486
+
+%value currently not verified
+%kg*m^2
+yaw_inertia
+100
+
+%coefficient of friction, at 0 load
+CoF
+1.6
+
+%load sensitivity, 1/N
+loadS
+0.0004077471967
+
+%unitless, overall
+Cd
+1.41
+
+%unitless, overall
+Cl
+2.77
+
+%m^2
+A
+1
+
+%kg/m^3
+rho
+1.162
+
+%Front Downforce Ratio
+FDF
+0.475
+
+%value currently not verified
+%m
+cp_height
+0
+
+%proportion front
+brake_bias
+0.7
+
+%primary drive is 76/36
+primary_drive
+2.1111111111111111111
+
+engine_sprocket_teeth
+13
+
+diff_sprocket_teeth
+37
+
+%rear tire radius is 8 in, converted to m
+rear_tire_radius
+0.2032
+
+%number of gear ratios, then gear ratios
+gear_ratios
+4
+2.75
+2
+1.667
+1.44
+
+%1.304
