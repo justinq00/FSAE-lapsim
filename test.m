@@ -1,9 +1,12 @@
+% EXAMPLE USES OF LAP SIM
+% UNCOMMENT DESIRED SECTION TO SEE FUNCTIONALITY
+
 %course starting speed
 course_start_speed = 1; %m/s
 
 RM25 = Car('RM25.txt', 'RM24Engine.csv');
 
-% Example single run
+% Example single autoX run. Plot some parameters from the run
 %{
 mich = Track('2018MichiganAXTrack_new.csv', 10, 1);
 mich.speed_arr(1) = course_start_speed;
@@ -12,7 +15,10 @@ speed_vs_distance(mich);
 throttle_vs_distance(mich);
 %}
 
+% Example total competition dynamic points calculation
+%{
 [points, sum_pts] = dynamic_pts(RM25);
+%}
 
 % Example 1D sweep.
 %{
@@ -170,7 +176,7 @@ zlabel('laptime');
 hold on;
 %}
 
-% certain values
+% Evaluation of CG vs weight distribution with values generated from CAD
 %{
 cg_vec = [0.347, 0.344, 0.341, 0.337, 0.334];
 dist_vec = [0.47, 0.473, 0.476, 0.478, 0.482];
@@ -231,9 +237,9 @@ lat_g_vs_distance(mich);
 angular_velocity_vs_distance(mich);
 %}
 
-% animation test
+% animation test of tire force vectors over 1 lap
 %{
-mich = Track('2018MichiganAXTrack.csv', 10, 1);
+mich = Track('2018MichiganAXTrack_new.csv', 10, 1);
 mich.speed_arr(1) = course_start_speed;
 [lap_time, mich] = solve_track(mich, RM25);
 new_info = ['laptime: ', num2str(lap_time)];
